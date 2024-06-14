@@ -1,0 +1,115 @@
+nav{
+    display: block;
+    padding: 5px 5px 0px 5px;
+    background: #0000ff1a;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+.top-nav-con .logo-sell{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+}
+.nav-sell-action a{
+    text-decoration: none;
+    opacity: 60%;
+
+}
+nav .logo img{
+    width: 40px;
+}
+nav .top-nav-con {
+    display: flex;
+    justify-content: space-between ;
+
+}
+nav .next-nav-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .nav-right-con {
+    display: flex;
+    align-items: center;
+}
+nav .nav-datas{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    margin-left: 50px;
+}
+.nav-datas div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: solid 0px;
+    padding: 3px;
+    font-size: 10px;
+    /* border: solid 1px gray; */
+}
+.nav-datas div .datas-icon{
+    font-size: 18px;
+}
+.nav-search{
+    display: flex;
+    align-items: center;
+
+}
+.nav-search input{
+    padding: 7px;
+    border-radius: 50px 0px 0px 50px;
+    border: solid transparent 1px;
+
+}
+.nav-search button{
+    background: white;
+    border: solid transparent 1px;
+    border-radius: 0px 50px 50px 0px;
+    padding: 1px;
+    width: auto;
+    cursor: pointer;
+}.sign-mycard{
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
+    gap: 15px;
+}
+.sign-mycard button{
+    padding: 7px;
+    border: solid 1px blue;
+    border-radius: 7px;
+    color: blue;
+
+}
+.sign-mycard .addCart-btn{
+    display: flex !important;
+    justify-content: space-between;
+    gap: 8px;
+
+}
+.sign-mycard .add-icon{
+    font-size: 15px;
+}
+.items-path{
+    display: flex;
+    gap: 10px;
+}
+.items-path a{
+    font-size: 11px;
+    text-decoration: none;
+    padding: 3px 10px 3px 10px;
+
+    background: #0000ff4d;
+    border-radius: 50px;
+}

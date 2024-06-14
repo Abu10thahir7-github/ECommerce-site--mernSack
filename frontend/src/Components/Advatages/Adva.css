@@ -1,0 +1,62 @@
+.advatage{
+    width: 147px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+.adv-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 3px 1px #00000042;
+    padding: 5px 3px 5px 10px;
+    border-radius: 15px 0px 0px 15px;
+    border-right: 0px;
+    width: 35px;
+    height: 9vh;
+    transition: width 0.6s ease;
+}
+
+.adv-con:hover {
+    width: 100px;
+}
+
+.adv-con h5, .adv-con p {
+    font-size: 9px; /* Adjust this to your preference */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.adv-con p {
+    font-size: 8px;
+    opacity: 0.63;
+}
+
+.adv-con:hover h5, .adv-con:hover p {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInMoveUp 0.6s ease forwards;
+}
+
+@keyframes fadeInMoveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adva-icon {
+    transition: transform 0.5s ease !important;
+}
+
+.adv-con:hover .adva-icon {
+   
+}
