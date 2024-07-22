@@ -1,5 +1,5 @@
 .advatage{
-    width: 147px;
+    width: 120px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -10,8 +10,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0px 0px 3px 1px #00000042;
+
     padding: 5px 3px 5px 10px;
+    background: #0000ff16;
     border-radius: 15px 0px 0px 15px;
     border-right: 0px;
     width: 35px;

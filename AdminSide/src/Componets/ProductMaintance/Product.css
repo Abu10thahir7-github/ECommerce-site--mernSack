@@ -1,0 +1,12 @@
+.addproduct-image-icon{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #ffffff61;
+    height: 35px;
+    color: #000000a1;
+    width: 35px;
+    padding: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+}

@@ -2,14 +2,14 @@ import React from 'react'
 import './Nav.css'
 import Logo from './logo.png'
 import user_img from  './user.png'
+import Box from '@mui/joy/Box';
+import Chip from '@mui/joy/Chip';
 import LocalGroceryStoreRoundedIcon from '@mui/icons-material/LocalGroceryStoreRounded';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 import TuneIcon from '@mui/icons-material/Tune';
 function Navbar() {
 
 
-  const navSampledata = ['Clothing & Shoes','Entertaiment' , 'Music', 'Sports' , 'Pets', 'Kitchen','Travel','Vintage']
   return (
     <nav>
         <div className="top-nav-con">
@@ -21,21 +21,13 @@ function Navbar() {
             <h2>FlameShop</h2>
           
         </div>
-        <div className="nav-sell-action">
-            <a href="#">Sell on FlameShop</a>
-        </div>
+   
            </div>
-        <div className="nav-search">
-            <input type="text" placeholder='Search'/>
-            <button>
-
-            <SearchRoundedIcon />
-            </button>
-        </div>
+  
         <div className="nav-right-con">
 
         <div className="sign-mycard">
-           <button className='sign-btn'>Sign in</button>
+    
            <button className='addCart-btn'><LocalGroceryStoreRoundedIcon className='add-icon' /> My cart</button>
         </div>
         <div className="nav-userProfile">
@@ -48,19 +40,23 @@ function Navbar() {
 
         </div>
         <div className="next-nav-con">
-          <div className="nav-datas">
-            
-       { navSampledata.map((data)=> 
-
-<div>
-            <span><CheckroomIcon className='datas-icon' /></span>
-            <p>{data}</p>
-            </div>
-      )}
-      </div>
+  
       <div className="items-path">
         <a href="">Offers Items</a>
         <a href="">New Items Arrived</a>
+      </div>
+      <div className="category">
+      <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+    
+    
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }} >Sports & Kits</Chip>
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }}>Clouths </Chip>
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }}>Men</Chip>
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }}>Womens</Chip>
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }}>Kids</Chip>
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }}>Smart Phone</Chip>
+        <Chip slotProps={{ action: { component: 'a', href: '#as-link' } }}>Pc & Laptops</Chip>
+        </Box>
       </div>
         <div className="nav-setting">
       
