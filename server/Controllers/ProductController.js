@@ -69,16 +69,33 @@ const GETproduct = async (req, res) => {
     const products = await ProductModel.find();
     const productWithImage = products.map((product) => {
       const imagePath = product.image
-        ? `http://localhost:5000/images/${product.image}`
+        ? `http://localhost:2000/images/${product.image}`
         : null;
 
       return { ...product.toObject(), image: imagePath };
     });
-    res.json(productWithImage);
-    console.log(productWithImage);
+    res.json(productWithImage); 
+
   } catch (error) {
     res.status(500).send("Error fetching product");
     console.error("Error fetching product:", error);
+  }     
+};   
+const getProductById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const Product = await ProductModel.findById(id);
+    if (!Product) {
+      return res.status(404).send("Product not found");
+    }
+    const imagePath = Product.image
+      ? `  http://localhost:2000/images/${Product.image}`
+      : null;
+    res.status(200).send({ ...Product.toObject(), image: imagePath });
+    // console.log({ ...Product.toObject(), image: imagePath });
+  } catch (error) {
+    res.status(500).send("Error fetching Product");
+    console.error("Error fetching Product:", error);
   }
 };
 
@@ -86,4 +103,5 @@ module.exports = {
   upload,
   ProductAdd,
   GETproduct,
+  getProductById
 };

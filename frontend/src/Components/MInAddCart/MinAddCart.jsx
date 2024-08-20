@@ -1,29 +1,38 @@
-import React from 'react'
-import  './cate.css'
-import img from './img.jpg'
-import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
-import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
-function AllCategories() {
+import React from 'react';
+import { useSelector } from 'react-redux';
+import './cate.css';
+import { Link } from 'react-router-dom';
+
+function MinCart() {
+  const cartItems = useSelector((state) => state.cart.cartItems || []); // Ensure cartItems defaults to an empty array
+
   return (
     <div className='my-min-Cart'>
       <div className="min-cart-title">
         <h3>Your Cart</h3>
-        
       </div>
       <div className="min-cart-items">
-        <div className="cart-items">
-          <img src={img} alt="" />
-          <div className="items-con">
-            <p>Iphone 15 max</p>
-            <p>$ 150000</p>
-          </div>
-        </div>
+        {cartItems.length === 0 ? (
+          <p>Cart is empty</p>
+        ) : (
+          cartItems.map((item) => (
+            <div className="cart-items" key={item._id}>
+              <img src={item.imageUrl} alt={item.Name} />
+              <div className="items-con">
+                <p className='min-cart-item-title'>{item.Name}</p>
+                <p>$ {item.price}</p>
+              </div>
+            </div>
+          ))
+        )}
       </div>
-        <div className="cart-checkOut">
-          <button>Check Out</button>
-        </div>
+      <div className="cart-checkOut">
+         <Link to={'/Cart'}>
+        <button>Check Out</button>
+        </Link>
+      </div>
     </div>
-  )
+  );
 }
 
-export default AllCategories
+export default MinCart;

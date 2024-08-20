@@ -7,9 +7,10 @@ import Chip from '@mui/joy/Chip';
 import LocalGroceryStoreRoundedIcon from '@mui/icons-material/LocalGroceryStoreRounded';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 import TuneIcon from '@mui/icons-material/Tune';
+import { useLocation } from 'react-router-dom';
 function Navbar() {
 
-
+  const location = useLocation();
   return (
     <nav>
         <div className="top-nav-con">
@@ -39,7 +40,7 @@ function Navbar() {
 
 
         </div>
-        <div className="next-nav-con">
+        <div className={  location.pathname === "/home" ? "next-nav-con" : "display-off-next-nav " }>
   
       <div className="items-path">
         <a href="">Offers Items</a>

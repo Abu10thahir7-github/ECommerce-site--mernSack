@@ -138,14 +138,7 @@
 
 
 }
-.nav-search button{
-    background: white;
-    border: solid transparent 1px;
-    border-radius: 0px 50px 50px 0px;
-    padding: 1px;
-    width: auto;
-    cursor: pointer;
-}
+
 .nav-search input{
     padding: 7px;
     border-radius: 50px 0px 0px 50px;
@@ -220,4 +213,11 @@ font-size: 15px !important;
 }
 .cart-img{
     object-fit:contain !important ;
+}
+.popup-img-name-des{
+    display: flex !important;
+    gap: 10px !important;
+}
+.popup-img-name-des .cart-img{
+    border-radius: 20px !important;
 }
