@@ -74,12 +74,7 @@ nav .nav-datas{
     align-items: center;
 
 }
-.nav-search input{
-    padding: 7px;
-    border-radius: 50px 0px 0px 50px;
-    border: solid transparent 1px;
-
-}
+ 
 .sign-mycard{
     display: flex;
     margin-right: 15px;

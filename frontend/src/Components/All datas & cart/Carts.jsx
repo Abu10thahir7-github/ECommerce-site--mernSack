@@ -9,7 +9,8 @@ import axios from "axios";
 import { ProductAPI } from "../ApiEndpoint";
 import Stack from "@mui/joy/Stack";
 import Input from '@mui/joy/Input';
-
+import Select from '@mui/joy/Select';
+import Option from '@mui/joy/Option';
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
@@ -101,31 +102,23 @@ function Carts() {
     <div className="Cart">
       <div className="fil-pri-bra-toggle">
         <div className="fil-pri-bra">
-          <select>
-            <option value="0">Sort by</option>
-            <option value="">New</option>
-            <option value="">Old</option>
-          </select>
-          <select>
-            <option value="0">Sort by</option>
-            <option value="">New</option>
-            <option value="">Old</option>
-          </select>
-          <select>
-            <option value="0">low - high</option>
-            <option value="">0 - 199</option>
-            <option value="">200 - 500</option>
-            <option value="">500 - 1000</option>
-            <option value="">1000 - 3000</option>
-          </select>
+          <div className="select-con">
+
+        <Select defaultValue="dog"  placeholder="Filter"
+  size="sm"
+  variant="soft">
+      <Option value="dog">Dog</Option>
+      <Option value="cat">Cat</Option>
+    </Select>
+    </div>
           <div className="nav-search">
           <Input sx={{
-    "--Input-decoratorChildHeight": "16px",
-    "--Input-minHeight": "0px",
-    "--Input-focusedThickness": "1px",
-    "--Input-placeholderOpacity": 0.2,
-    "--Input-gap": "5px"
-  }} type="text" className="search-input" size="sm" placeholder="Search..." variant="soft"  endDecorator={<Button sx={{ }} variant="plain"> <SearchRoundedIcon /></Button>} />
+                "--Input-radius": "27px",
+ 
+  }} type="text" className="search-input" size="sm" placeholder="Search..." variant="soft"  endDecorator={<Button   color="neutral"
+  onClick={function(){}}
+  size="sm"
+  variant="plain"> <SearchRoundedIcon /></Button>} />
     
           </div>
         </div>

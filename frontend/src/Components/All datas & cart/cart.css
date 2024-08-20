@@ -32,7 +32,7 @@
     overflow-x: hidden !important;
 }
 .fil-pri-bra{
-    width: fit-content;
+
     display: flex;
     align-items: center;
     gap: 20px;
@@ -139,12 +139,7 @@
 
 }
 
-.nav-search input{
-    padding: 7px;
-    border-radius: 50px 0px 0px 50px;
-    border: solid transparent 1px;
 
-}
 .offers{
 
 }
